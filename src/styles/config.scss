@@ -1,0 +1,20 @@
+@use "sass:math";
+
+//REM
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+//======================= Variables ===================================
+$mainColor: #f4e041;
+$secondColor: #00bdd3;
+$bgcolor: #f8f8f8;
+
+//======================= Variables ===================================
+
+//======================= Fonts ===================================
+
+@import url(https://fonts.googleapis.com/css?family=Nunito:regular&display=swap);
+
+//======================= Fonts ===================================

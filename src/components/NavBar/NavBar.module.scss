@@ -1,0 +1,21 @@
+@import "../../styles/config.scss";
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 auto;
+  height: rem(60);
+  gap: rem(0);
+  background-color: transparent;
+}
+
+.menuLogo {
+  width: rem(104);
+}
+
+.menuButtons {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+}

@@ -1,0 +1,19 @@
+@import "../../../styles/config.scss";
+
+.spinner {
+  width: rem(48);
+  height: rem(48);
+  margin: 0 auto;
+  img {
+    animation: rotate 2s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

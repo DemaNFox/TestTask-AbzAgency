@@ -1,0 +1,27 @@
+@import "../../../styles/config.scss";
+
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $mainColor;
+  border-color: transparent;
+  border-radius: rem(80);
+  height: rem(34);
+  width: rem(100);
+  padding: rem(4) 0;
+  font-size: rem(16);
+  line-height: calc(26 / 16);
+  transition: background 0.2s ease 0s;
+
+  &:hover {
+    background-color: #ffe302;
+  }
+
+  &.disabled {
+    background: #b4b4b4;
+    color: rgba(255, 255, 255, 0.87);
+    cursor: default;
+  }
+}

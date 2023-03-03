@@ -1,0 +1,114 @@
+@import "../styles/config.scss";
+
+.home-gape {
+  // .home-gape__header
+  &__header {
+    background-color: #fff;
+  }
+  // .home-gape__main
+  &__main {
+  }
+  // .home-gape__users
+  &__users {
+    margin-top: rem(140);
+  }
+  // .home-gape__form
+  &__form {
+    margin-top: rem(140);
+  }
+}
+.main-section {
+  position: relative;
+
+  display: block;
+  height: 100%;
+
+  background-size: cover;
+  background-position: center;
+
+  // .main-section__container
+  &__container {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/bgImage.jpeg");
+    padding-top: rem(164);
+    padding-bottom: rem(163);
+    @media (max-width: 1029.98px) {
+      padding-top: clamp(5.563rem, -8.5rem + 29.3vw, 10.25rem);
+      padding-bottom: clamp(5.5rem, -8.75rem + 29.69vw, 10.25rem);
+    }
+    @media (max-width: 767.98px) {
+      padding-top: clamp(2.5rem, -0.202rem + 12.01vw, 5.563rem);
+      padding-bottom: clamp(4.438rem, 3.5rem + 4.17vw, 5.5rem);
+    }
+  }
+  // .main-section__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(20);
+    max-width: rem(380);
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+    button {
+      margin-top: rem(13);
+    }
+  }
+}
+
+.users-section {
+  // .user-section__container
+  &__container {
+  }
+  // .user-section__header
+  &__header {
+    text-align: center;
+  }
+  // .user-section__body
+  &__body {
+    margin-top: rem(50);
+    display: grid;
+    gap: rem(30);
+    grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+    @media (max-width: 767.98px) {
+      gap: rem(16);
+    }
+    @media (max-width: 359.98px) {
+      gap: rem(20);
+    }
+  }
+  // .user-section__button
+  &__button {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    margin-top: rem(20);
+    button {
+      width: rem(120);
+    }
+    @media (max-width: 1021.98px) {
+      grid-column: span 2;
+    }
+    @media (max-width: 767.98px) {
+      margin-top: rem(34);
+    }
+    @media (max-width: 655.98px) {
+      grid-column: span 1;
+    }
+    @media (max-width: 359.98px) {
+      margin-top: rem(30);
+    }
+  }
+}
+.form-section {
+  // .form-section__container
+  &__container {
+  }
+  // .form-section__header
+  &__header {
+    text-align: center;
+  }
+  // .form-section__body
+  &__body {
+  }
+}

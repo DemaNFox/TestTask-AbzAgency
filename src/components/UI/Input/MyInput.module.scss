@@ -1,0 +1,62 @@
+@import "../../../styles/config.scss";
+
+.inputElement {
+  display: flex;
+  flex-direction: column;
+}
+.myInput {
+  height: rem(54);
+  display: flex;
+  flex: 1 1 auto;
+  border: rem(1) solid #d0cfcf;
+  border-radius: rem(4);
+  position: relative;
+  &.error {
+    border: rem(1) solid #cb3d40;
+  }
+  &:focus-within {
+    & .label {
+      opacity: 1;
+      top: rem(-8);
+      left: rem(-2);
+    }
+  }
+}
+.input {
+  display: flex;
+  flex: 1 1 100%;
+  height: 100%;
+  padding: rem(14) rem(16);
+  font-size: rem(16);
+  line-height: calc(26 / 16);
+  border: none;
+  outline: none;
+  background: transparent;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+  }
+}
+.inputHelper {
+  color: #7e7e7e;
+  font-size: rem(12);
+  line-height: calc(14 / 12);
+  margin-left: rem(16);
+  padding-top: rem(2);
+}
+
+.inputHelper.error {
+  color: #cb3d40;
+}
+
+.inputHelper.label {
+  position: absolute;
+  z-index: 1;
+  background-color: $bgcolor;
+  opacity: 0;
+  padding: 0 rem(4);
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}

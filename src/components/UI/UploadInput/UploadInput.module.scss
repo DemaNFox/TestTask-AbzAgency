@@ -1,0 +1,62 @@
+@import "../../../styles/config.scss";
+
+.uploadElement {
+}
+.uploadInput {
+  height: rem(54);
+  display: flex;
+  flex: 1 1 auto;
+  border: rem(1) solid #d0cfcf;
+  border-radius: rem(4);
+  &.error {
+    border: rem(1) solid #cb3d40;
+  }
+}
+.input {
+  display: none;
+}
+
+.inputLabel {
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: rem(1) solid rgba(0, 0, 0, 0.87);
+  border-radius: rem(4) 0 0 rem(4);
+  padding: rem(14) rem(14);
+  color: rgba(0, 0, 0, 0.87);
+  font-size: rem(16);
+  line-height: calc(26 / 16);
+  transition: background 0.2s ease 0s;
+  &.error {
+    border: rem(1) solid #cb3d40;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #7e7e7e1f;
+    }
+  }
+}
+
+.filePrev {
+  // display: flex;
+  // align-items: center;
+  // flex: 1 1 100%;
+  color: #7e7e7e;
+  font-size: rem(16);
+  line-height: calc(26 / 16);
+  padding: rem(14) rem(15);
+  // display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.inputError {
+  color: #cb3d40;
+  font-size: rem(12);
+  line-height: calc(14 / 12);
+  margin-left: rem(15);
+}

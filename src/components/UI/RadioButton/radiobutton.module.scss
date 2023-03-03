@@ -1,0 +1,46 @@
+@import "../../../styles/config.scss";
+
+.label {
+  display: flex;
+  align-items: center;
+  font-size: rem(16);
+  line-height: calc(26 / 16);
+  color: rgba(0, 0, 0, 0.87);
+  position: relative;
+  padding-left: rem(32);
+  cursor: pointer;
+  span {
+    display: block;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      width: rem(18);
+      height: rem(18);
+      border: rem(1) solid #00bdd3;
+      border-radius: 50%;
+      transform: translate(0px, -50%);
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: rem(8);
+      left: rem(5);
+      background-color: #00bdd3;
+      width: rem(10);
+      height: rem(10);
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.2s ease 0s;
+    }
+  }
+  input {
+    display: none;
+    &:checked {
+      + span::after {
+        opacity: 1;
+      }
+    }
+  }
+}
